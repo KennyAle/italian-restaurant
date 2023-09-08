@@ -11,6 +11,22 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.title {
+    font-family: 'Cookie', cursive;
+}
+
+.title2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 9px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+/* NAVIGATION BAR */
 nav {
     width: 100vw;
     height: 70px;
@@ -23,12 +39,11 @@ nav {
     justify-content: space-between;
     position: fixed;
     top: 0;
-    z-index: 5;
+    z-index: 100;
 }
 
 nav > span {
     font-size: 2.2rem;
-    font-family: 'Cookie', cursive;
 }
 
 nav > ul {
@@ -47,6 +62,7 @@ nav > ul > li:after {
     font-size: 0.7rem;
 }
 
+/* HEROBANNER */
 .banner {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
     url(../imgs/banner.jpg);
@@ -62,11 +78,83 @@ nav > ul > li:after {
 
 .banner > span {
     font-size: 5rem;
-    font-family: 'Cookie', cursive;
 }
 
-.banner > h1 {
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    letter-spacing: 9px;
+/* INFO */
+.info-container {
+    background-color: rgb(246 244 241);
+    height: 80vh;
+    position: relative;
+}
+
+.info {
+    background: white;
+    width: 80vw;
+    height: 90vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.info-content {
+    text-align: center;
+    padding: 1rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info-content a {
+    color: rgb(199 177 149);
+    border: 2px solid rgba(199, 177, 149, 0.5);
+    border-radius: 2px;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.info-text {
+    font-size: 0.6rem;
+    line-height: 1.5;
+    font-weight: 600;
+    color: rgb(184, 184, 184);
+}
+
+.info-header {
+    font-size: 2rem;
+}
+
+.about {
+    width: 100%;
+    grid-column: 2 / -1;
+}
+
+.reservations-img {
+    width: 100%;
+    background: url(../imgs/banner.jpg);
+    background-size: cover;
+    grid-column: 2 / -1;
+}
+
+.about-img {
+    width: 100%;
+    background: url(../imgs/banner.jpg);
+    background-size: cover;
+}
+
+/* SPECIALITIES */
+.specialities {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url(../imgs/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: white;
+    display: grid;
+    place-content: center;
 }
