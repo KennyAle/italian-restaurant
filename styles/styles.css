@@ -16,9 +16,17 @@ body {
 }
 
 .title2 {
-    font-size: 1.8rem;
+    font-size: 3.8rem;
     text-transform: uppercase;
-    letter-spacing: 9px;
+    letter-spacing: 15px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: rgba(184, 184, 184, 0.8);
+    letter-spacing: 1px;
 }
 
 .link {
@@ -28,22 +36,22 @@ body {
 
 /* NAVIGATION BAR */
 nav {
-    width: 100vw;
-    height: 70px;
+    width: 100%;
+    height: 100px;
     color: rgba(255, 255, 255, 0.9);
     padding: 0 1rem;
-    font-size: 0.6rem;
+    font-size: 1rem;
     font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
+    position: absolute;
     top: 0;
-    z-index: 100;
+    z-index: 10;
 }
 
 nav > span {
-    font-size: 2.2rem;
+    font-size: 3.3rem;
 }
 
 nav > ul {
@@ -56,10 +64,11 @@ nav > ul > li {
     position: relative;
 }
 
-nav > ul > li:after {
+nav > ul > li::after {
     content: '·';
     padding: 0 1.3rem;
-    font-size: 0.7rem;
+    font-size: 1.7rem;
+    opacity: 0.5;
 }
 
 /* HEROBANNER */
@@ -77,7 +86,7 @@ nav > ul > li:after {
 }
 
 .banner > span {
-    font-size: 5rem;
+    font-size: 9rem;
 }
 
 /* INFO */
@@ -113,20 +122,20 @@ nav > ul > li:after {
     color: rgb(199 177 149);
     border: 2px solid rgba(199, 177, 149, 0.5);
     border-radius: 2px;
-    padding: 0.5rem 0.8rem;
-    font-size: 0.8rem;
+    padding: 0.8rem 3.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 .info-text {
-    font-size: 0.6rem;
+    font-size: 1rem;
     line-height: 1.5;
     font-weight: 600;
     color: rgb(184, 184, 184);
 }
 
 .info-header {
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 .about {
@@ -223,7 +232,7 @@ nav > ul > li:after {
 }
 
 .specialities-content-div > h2 {
-    font-size: 0.8rem;
+    font-size: 1.4rem;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -232,7 +241,116 @@ nav > ul > li:after {
 
 .specialities-grid > * > span {
     color: rgb(199 177 149);
-    font-size: 0.7rem;
-    font-weight: 900;
+    font-size: 1.1rem;
+    font-weight: 1000;
     text-transform: uppercase;
 }
+
+.specialities-sep {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url(../imgs/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+
+/* MENU */
+.menu {
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    justify-items: center;
+    gap: 4.3rem;
+}
+
+.menu h2 {
+    font-size: 4.1rem;
+    position: relative;
+}
+
+.menu h2::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid rgb(199 177 149);
+    width: 50%; 
+    margin-top: 3px;
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+.menu h2:hover::after {
+    width: 100%;
+}
+
+.menu-container {
+    max-width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+}
+
+.menu-container h3 {
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-text {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu-text > p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.menu-price {
+    color: rgb(199 177 149);
+    font-family: 'Cookie', cursive;
+    font-size: 2.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transform: skew(-15deg) scale(1, 1.4);
+    align-self: center;
+}
+
+.bg-img {
+    width: 100px;
+    position: absolute;
+}
+
+.bg-img-1 {
+    top: 0;
+    right: 0;
+    transform: translate(45%, 0%);
+    width: 500px;
+}
+
+.bg-img-2 {
+    top: 40%;
+    left: 0;
+    transform: translate(-60%, -60%) rotate(-20deg);
+    width: 600px;
+}
+
+.bg-img-3 {
+    bottom: 0;
+    right: 0;
+    transform: translateX(20%) rotate(210deg);
+    width: 700px;
+}
+
+
+
