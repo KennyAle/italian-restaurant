@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Italian Restaurant | Menu</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <span class="title"><a href="../index.html" class="link">Restaurant</a></span>
+        <ul>
+            <li><a href="./menu.html" class="link">Menu</a></li>
+            <li><a href="#" class="link">Recipes</a></li>
+            <li><a href="#" class="link">About Restaurant</a></li>
+            <li><a href="./contact.html" class="link">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- BANNER -->
+    <section class="banner">
+        <span class="title">Contact</span>
+        <h1 class="title2">Italian Specialities</h1>
+    </section>
+    <!-- CONTACT -->
+    <section class="contact">
+        <div class="contact-container">
+            <div class="form-img"></div>
+            <div class="form-content">
+                <h2 class="info-header title">Contact us</h2>
+                <form action="">
+                    <input type="text" placeholder="Enter Your Name">
+                    <input type="email" placeholder="Enter Your E-mail">
+                    <input type="text" placeholder="Enter Your Number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                    <textarea rows="10" placeholder="Enter Your Message"></textarea>
+                    <input class="form-button" type="submit">
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <h2 class="title">Restaurant</h2>
+        <ul class="footer-links">
+            <li><a class="link" href="#">Contact</a></li>
+            <li><a class="link" href="#">Newsletter</a></li>
+            <li><a class="link" href="#">Feedback</a></li>
+        </ul>
+        <ul class="social">
+            <li><a href="#" target="_blank"><img src="../imgs/pasta.png" alt="social links"></a></li>
+            <li><a href="#" target="_blank"><img src="../imgs/pasta.png" alt="social links"></a></li>
+            <li><a href="#" target="_blank"><img src="../imgs/pasta.png" alt="social links"></a></li>
+        </ul>
+        <p>© 2023 Italian Restaurant</p>
+    </footer>
+</body>
+</html>

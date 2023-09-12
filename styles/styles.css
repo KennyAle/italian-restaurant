@@ -31,7 +31,6 @@ body {
 
 .link {
     text-decoration: none;
-    color: black;
 }
 
 /* NAVIGATION BAR */
@@ -50,25 +49,29 @@ nav {
     z-index: 10;
 }
 
-nav > span {
+nav span {
     font-size: 3.3rem;
 }
 
-nav > ul {
+nav ul {
     list-style-type: none;
     display: flex;
     text-transform: uppercase;
 }
 
-nav > ul > li {
+nav li {
     position: relative;
 }
 
-nav > ul > li::after {
+nav li::after {
     content: '·';
     padding: 0 1.3rem;
     font-size: 1.7rem;
     opacity: 0.5;
+}
+
+nav a {
+    color: white;
 }
 
 /* HEROBANNER */
@@ -77,7 +80,8 @@ nav > ul > li::after {
     url(../imgs/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    background-attachment: fixed;
+    height: 95vh;
     padding: 2rem;
     color: white;
     text-align: center;
@@ -162,6 +166,7 @@ nav > ul > li::after {
     url(../imgs/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
     color: white;
     display: grid;
@@ -251,12 +256,13 @@ nav > ul > li::after {
     url(../imgs/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 90vh;
 }
 
 /* MENU */
 .menu {
-    padding: 2rem 0;
+    padding: 5rem 0;
     position: relative;
     overflow: hidden;
     display: grid;
@@ -346,11 +352,158 @@ nav > ul > li::after {
 }
 
 .bg-img-3 {
-    bottom: 0;
+    bottom: 5%;
     right: 0;
     transform: translateX(20%) rotate(210deg);
-    width: 700px;
+    width: 750px;
 }
 
+/* TESTIMONIALS */
+.testimonials {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url(../imgs/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    padding: 2.5rem;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.testimony {
+    position: relative;
+    width: 60%;
+}
+
+.testimony::before {
+    content: '“';
+    font-family: 'Cookie', cursive;
+    position: absolute;
+    transform: translatey(-50%);
+    font-size: 6rem;
+    left: 0;
+    top: 0;
+}
+
+.testimony::after {
+    content: '”';
+    font-family: 'Cookie', cursive;
+    position: absolute;
+    font-size: 6rem;
+    right: 0;
+}
+
+/* CONTACT */
+.contact {
+    background-color: rgb(246 244 241);
+    height: 80vh;
+    position: relative;
+}
+
+.contact-container {
+    background: white;
+    width: 80vw;
+    height: 90vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.form-content {
+    text-align: center;
+    padding: 1rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-column: 2 / span 3;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+input, textarea {
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+}
+
+input, textarea:focus {
+    outline: none;
+}
+
+.form-button {
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 700;
+    background: #39B54A;
+    border: none;
+}
+
+.info-header {
+    font-size: 4rem;
+}
+
+.form-img {
+    width: 100%;
+    background: url(../imgs/banner.jpg);
+    background-size: contain;
+}
+
+/* FOOTER */
+footer {
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url(../imgs/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 2.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer h2 {
+    font-size: 4rem;
+}
+
+footer ul {
+    list-style-type: none;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 1.2rem;
+}
+
+footer a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+}
+
+.social img {
+    width: 40px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
 
