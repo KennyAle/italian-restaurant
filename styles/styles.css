@@ -34,7 +34,7 @@ body {
 }
 
 /* NAVIGATION BAR */
-nav {
+.nav {
     width: 100%;
     height: 100px;
     color: rgba(255, 255, 255, 0.9);
@@ -49,28 +49,28 @@ nav {
     z-index: 10;
 }
 
-nav span {
+.nav span {
     font-size: 3.3rem;
 }
 
-nav ul {
+.nav ul {
     list-style-type: none;
     display: flex;
     text-transform: uppercase;
 }
 
-nav li {
+.nav li {
     position: relative;
 }
 
-nav li::after {
+.nav li::after {
     content: '·';
     padding: 0 1.3rem;
     font-size: 1.7rem;
     opacity: 0.5;
 }
 
-nav a {
+.nav a {
     color: white;
 }
 
@@ -103,7 +103,7 @@ nav a {
 .info {
     background: white;
     width: 80vw;
-    height: 90vh;
+    min-height: 90vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -151,6 +151,7 @@ nav a {
     width: 100%;
     background: url(../imgs/banner.jpg);
     background-size: cover;
+    background-position: center;
     grid-column: 2 / -1;
 }
 
@@ -158,6 +159,7 @@ nav a {
     width: 100%;
     background: url(../imgs/banner.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 /* SPECIALITIES */
@@ -169,6 +171,7 @@ nav a {
     background-attachment: fixed;
     height: 100vh;
     color: white;
+    text-align: center;
     display: grid;
     place-content: center;
 }
@@ -192,30 +195,22 @@ nav a {
     grid-area: specialities-4;
 }
 .specialities-1-img {
-    background: url(../imgs/banner.jpg);
-    background-size: cover;
     grid-area: specialities-1-img;
 }
 .specialities-2-img {
-    background: url(../imgs/banner.jpg);
-    background-size: cover;
     grid-area: specialities-2-img;
 }
 .specialities-3-img {
-    background: url(../imgs/banner.jpg);
-    background-size: cover;
     grid-area: specialities-3-img;
 }
 .specialities-4-img {
-    background: url(../imgs/banner.jpg);
-    background-size: cover;
     grid-area: specialities-4-img;
 }
 
 .specialities-grid {
     background: white;
     width: 80vw;
-    height: 90vh;
+    height: 115%;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -242,6 +237,13 @@ nav a {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: rgba(0, 0, 0, 0.8);
+}
+
+.specialities-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
 }
 
 .specialities-grid > * > span {
@@ -350,21 +352,21 @@ nav a {
     top: 0;
     right: 0;
     transform: translate(45%, 0%);
-    width: 500px;
+    width: 38%;
 }
 
 .bg-img-2 {
-    top: 40%;
+    top: 50%;
     left: 0;
-    transform: translate(-60%, -60%) rotate(-20deg);
-    width: 600px;
+    transform: translate(-70%, -60%) rotate(-210deg);
+    width: 45%;
 }
 
 .bg-img-3 {
     bottom: 5%;
     right: 0;
     transform: translateX(20%) rotate(210deg);
-    width: 750px;
+    width: 50%;
 }
 
 /* TESTIMONIALS */
@@ -423,8 +425,7 @@ nav a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
 }
 
 .form-content {
@@ -434,7 +435,15 @@ nav a {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    grid-column: 2 / span 3;
+    flex: 2;
+}
+
+.form-img {
+    width: 100%;
+    background: url(../imgs/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
 }
 
 form {
@@ -466,12 +475,6 @@ input, textarea:focus {
 
 .info-header {
     font-size: 4rem;
-}
-
-.form-img {
-    width: 100%;
-    background: url(../imgs/banner.jpg);
-    background-size: contain;
 }
 
 /* ABOUT */
@@ -573,7 +576,6 @@ input, textarea:focus {
 .recipe-img {
     width: 100%;
     object-fit: cover;
-    border: 2px solid red;
 }
 
 .recipe-text {
@@ -589,7 +591,6 @@ input, textarea:focus {
 }
 
 .recipe-item {
-    border: 2px solid red;
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
@@ -605,7 +606,7 @@ input, textarea:focus {
 
 .recipe-item a {
     color: rgb(199 177 149);
-    width: 40%;
+    width: 50%;
     border: 2px solid rgba(199, 177, 149, 1);
     border-radius: 2px;
     padding: 0.8rem 3.5rem;
@@ -627,6 +628,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -638,6 +640,7 @@ footer ul {
     list-style-type: none;
     font-size: 0.9rem;
     display: flex;
+    flex-wrap: wrap;
     gap: 1.2rem;
 }
 
@@ -654,5 +657,519 @@ footer a {
 
 footer p {
     font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES */
+@media all and (min-width: 1024px) and (max-width: 1280px) {}
+
+/* --------------------------------------------- */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+.nav {
+    display: none;
+}
+
+/* INFO */
+.info-container {
+    background-color: rgb(246 244 241);
+    height: auto;
+    position: relative;
+}
+
+.info {
+    position: relative;
+    width: 100%;
+    transform: translate(-50%);
+    top: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+.info-content {
+    text-align: center;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reservations {
+    grid-column: 1 / 2;
+}
+
+.reservations-img {
+    grid-column: 2 / -1;
+}
+
+.about-homepage {
+    grid-column: 2 / -1;
+}
+
+.about-homepage-image {
+    grid-column: 1 / 2;
+}
+
+/* SPECIALITIES */
+.specialities-container {
+    background-color: rgb(246 244 241);
+    height: auto;
+    position: relative;
+}
+
+.specialities-grid {
+    position: relative;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%);
+    top: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "specialities-1 specialities-1-img"
+        "specialities-2-img specialities-2"
+        "specialities-3 specialities-3-img"
+        "specialities-4-img specialities-4";
+}
+
+.specialities-grid > div {
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.specialities-sep {
+    height: 55vh;
+}
+
+/* RECIPES */
+.recipe-container {
+    padding: 0 1rem;
+}
+
+.recipe-item {
+    padding: 1.5rem;
+    gap: 0.5rem;
+}
+
+.recipe-item a {
+    width: auto;
+}
+
+.recipe-img {
+    height: 100%;
+}
+}
+
+/* --------------------------------------------- */
+@media all and (min-width: 480px) and (max-width: 768px) {
+.nav {
+    display: none;
+}
+
+/* BANNER */
+.banner > span {
+    font-size: 7rem;
+}
+
+.title2 {
+    font-size: 2.1rem;
+}
+
+/* INFO */
+.info-container {
+    background-color: rgb(246 244 241);
+    height: auto;
+    position: relative;
+}
+
+.info {
+    position: relative;
+    width: 100%;
+    transform: translate(-50%);
+    top: 0;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.reservations {
+    grid-column: 1 / -1;
+}
+
+.reservations-img {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+}
+
+.about-homepage {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+}
+
+.about-homepage-image {
+    grid-column: 1 / -1;
+    grid-row: 4 / -1;
+}
+
+/* SPECIALITIES */
+.specialities-container {
+    background-color: rgb(246 244 241);
+    height: auto;
+    position: relative;
+}
+
+.specialities-grid {
+    position: relative;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%);
+    top: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "specialities-1 specialities-1-img"
+        "specialities-2-img specialities-2"
+        "specialities-3 specialities-3-img"
+        "specialities-4-img specialities-4";
+}
+
+.specialities-grid > div {
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.specialities-sep {
+    height: 60vh;
+}
+
+/* MENU */
+.menu-container {
+    max-width: 80%;
+    gap: 2rem;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-text {
+    flex-direction: column;
+    gap: 0;
+}
+
+.menu-price {
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    align-self: flex-end;
+}
+
+.menu-price2 {
+    color: rgb(199 177 149);
+    font-family: 'Cookie', cursive;
+    font-size: 2.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transform: skew(-15deg) scale(1, 1.4);
+    align-self: center;
+}
+
+.bg-img-2 {
+    display: none;
+}
+
+.testimonials {
+    font-size: 1.1rem;
+    padding: 0;
+}
+
+/* RECIPES */
+.recipes {
+    gap: 2rem;
+}
+
+.recipe-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.recipe-right div {
+    order: -1;
+}
+
+.recipe-item {
+    padding: 0;
+}
+
+.recipe-item > h2, h3 {
+    text-align: center;
+}
+
+.recipe-item a {
+    width: auto;
+}
+
+/* CONTACT */
+.contact-container {
+    width: 100%;
+    flex-direction: column;
+    position: static;
+    height: auto;
+    transform: none;
+}
+
+.form-content {
+    padding: 1rem 2rem;
+    gap: 1rem;
+}
+
+form {
+    gap: 1.3rem;
+}
+
+input {
+    padding: 0.8rem;
+}
+}
+
+/* --------------------------------------------- */
+@media all and (max-width: 480px) {
+.nav {
+    display: none;
+}
+
+/* BANNER */
+.banner {
+    height: 50vh;
+}
+
+.banner > span {
+    font-size: 4.8rem;
+}
+
+.title2 {
+    font-size: 1.4rem;
+    padding: 2rem;
+    letter-spacing: 8px;
+}
+
+/* INFO */
+.info-container {
+    background-color: rgb(246 244 241);
+    height: auto;
+    position: relative;
+}
+
+.info {
+    position: relative;
+    width: 100%;
+    transform: translate(-50%);
+    top: 0;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.info-content {
+    padding: 0 1.5rem;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.reservations {
+    grid-column: 1 / -1;
+}
+
+.reservations-img {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+}
+
+.about-homepage {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+}
+
+.about-homepage-image {
+    grid-column: 1 / -1;
+    grid-row: 4 / -1;
+}
+
+/* SPECIALITIES */
+.specialities {
+    height: 50vh;
+}
+
+.specialities-container {
+    background-color: rgb(246 244 241);
+    height: auto;
+    position: relative;
+}
+
+.specialities-grid {
+    position: relative;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%);
+    top: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "specialities-1" 
+        "specialities-1-img"
+        "specialities-2"
+        "specialities-2-img" 
+        "specialities-3" 
+        "specialities-3-img"
+        "specialities-4"
+        "specialities-4-img";
+}
+
+.specialities-grid > div {
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.specialities-grid > img {
+    width: 100vw;
+}
+
+.specialities-sep {
+    height: 50vh;
+}
+
+.specialities-1-img {
+    max-width: 100vw;
+}
+
+/* MENU */
+.menu-container {
+    max-width: 80%;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-text {
+    flex-direction: column;
+    gap: 0;
+}
+
+.menu-price {
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    align-self: flex-end;
+}
+
+.menu-price2 {
+    color: rgb(199 177 149);
+    font-family: 'Cookie', cursive;
+    font-size: 2.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transform: skew(-15deg) scale(1, 1.4);
+    align-self: center;
+}
+
+.bg-img-2 {
+    display: none;
+}
+
+/* TESTIMONIES */
+.testimonials {
+    height: 70vh;
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
+.testimony {
+    width: 80%;
+}
+
+/* RECIPES */
+.recipes {
+    padding: 1.5rem 0;
+    gap: 1rem;
+}
+
+.recipe-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.recipe-right div {
+    order: -1;
+}
+
+.recipe-item {
+    padding: 0;
+    gap: 1.5rem;
+}
+
+.recipe-item > h2, h3 {
+    text-align: center;
+}
+
+.recipe-item a {
+    width: auto;
+    padding: 0.8rem 1rem;
+}
+
+.recipe-ingredients {
+    line-height: 0.8;
+}
+
+/* CONTACT */
+.contact-container {
+    width: 100%;
+    flex-direction: column;
+    position: static;
+    height: auto;
+    transform: none;
+}
+
+.form-content {
+    padding: 1rem 1rem;
+    gap: 1rem;
+}
+
+form {
+    gap: 1.3rem;
+}
+
+input {
+    padding: 0.8rem;
+}
+
+/* FOOTER */
+footer {
+    gap: 2rem;
+}
+footer .title {
+    font-size: 3rem;
+}
+
+.footer-links {
+    font-size: 0.8rem;
+    gap: 2rem;
+}
+
+footer ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.social img {
+    width: 30px;
+}
 }
 
