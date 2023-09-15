@@ -53,9 +53,15 @@ body {
     font-size: 3.3rem;
 }
 
-.nav ul {
+.nav .navbar {
     list-style-type: none;
     display: flex;
+    text-transform: uppercase;
+}
+
+.nav .responsive-nav {
+    list-style-type: none;
+    display: none;
     text-transform: uppercase;
 }
 
@@ -76,11 +82,6 @@ body {
 
 /* HEROBANNER */
 .banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-    url(../imgs/banner.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     height: 95vh;
     padding: 2rem;
     color: white;
@@ -88,6 +89,48 @@ body {
     display: grid;
     place-content: center;
 }
+
+.banner-homepage {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url(../imgs/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.banner-menu {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url(../imgs/bgimg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.banner-recipes {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url(../imgs/bgimg4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.banner-about {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url(../imgs/place.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.banner-contact {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url(../imgs/bgimg5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
 
 .banner > span {
     font-size: 9rem;
@@ -149,7 +192,7 @@ body {
 
 .reservations-img {
     width: 100%;
-    background: url(../imgs/banner.jpg);
+    background: url(../imgs/place.jpg);
     background-size: cover;
     background-position: center;
     grid-column: 2 / -1;
@@ -157,7 +200,7 @@ body {
 
 .about-homepage-img {
     width: 100%;
-    background: url(../imgs/banner.jpg);
+    background: url(../imgs/menuimg.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -165,7 +208,7 @@ body {
 /* SPECIALITIES */
 .specialities {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-    url(../imgs/banner.jpg);
+    url(../imgs/bgimg2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -255,7 +298,7 @@ body {
 
 .specialities-sep {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-    url(../imgs/banner.jpg);
+    url(../imgs/bgimg1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -372,7 +415,7 @@ body {
 /* TESTIMONIALS */
 .testimonials {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url(../imgs/banner.jpg);
+    url(../imgs/bgimg3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -480,14 +523,14 @@ input, textarea:focus {
 /* ABOUT */
 .about {
     background-color: rgb(246 244 241);
-    height: 80vh;
+    height: 90vh;
     position: relative;
 }
 
 .about-container {
     background: white;
     width: 80vw;
-    height: 90vh;
+    min-height: 110%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -502,7 +545,8 @@ input, textarea:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .info-header {
@@ -619,7 +663,7 @@ input, textarea:focus {
 footer {
     color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url(../imgs/banner.jpg);
+    url(../imgs/bgimg3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -661,11 +705,28 @@ footer p {
 
 /* MEDIA QUERIES */
 @media all and (min-width: 1024px) and (max-width: 1280px) {}
+.responsive-nav {
+    display: none;
+}
 
 /* --------------------------------------------- */
 @media all and (min-width: 768px) and (max-width: 1024px) {
-.nav {
+
+/* NAV */
+.responsive-nav {
+    display: block;
+}
+
+.nav .navbar {
     display: none;
+}
+
+.nav span {
+    font-size: 3rem;
+}
+
+.nav li::after {
+    padding: 0 0.5rem;
 }
 
 /* INFO */
@@ -759,11 +820,23 @@ footer p {
 .recipe-img {
     height: 100%;
 }
+
+/* ABOUT */
+.about {
+    position: static;
+    height: auto;
+}
+
+.about-container {
+    position: static;
+    transform: none;
+    width: 100%;
+}
 }
 
 /* --------------------------------------------- */
 @media all and (min-width: 480px) and (max-width: 768px) {
-.nav {
+.nav .navbar {
     display: none;
 }
 
@@ -930,11 +1003,25 @@ form {
 input {
     padding: 0.8rem;
 }
+
+/* ABOUT */
+.about {
+    position: static;
+    height: auto;
+}
+
+.about-container {
+    position: static;
+    transform: none;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
 }
 
 /* --------------------------------------------- */
 @media all and (max-width: 480px) {
-.nav {
+.nav .navbar {
     display: none;
 }
 
@@ -1142,6 +1229,20 @@ form {
 
 input {
     padding: 0.8rem;
+}
+
+/* ABOUT */
+.about {
+    position: static;
+    height: auto;
+}
+
+.about-container {
+    position: static;
+    transform: none;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
 }
 
 /* FOOTER */
