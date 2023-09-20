@@ -1,1 +1,1 @@
-# italian-restaurant
+This repository showcases my front-end development skills through a static website project that meets General Portfolio Requirements while adding advanced CSS styling, Flexbox/Grid layouts, responsive design without frameworks, CSS animations, and a theme choice among a company website, portfolio, or product showcase. The project structure is organized for easy navigation, and ongoing refinement is recommended as I progress through my learning journey. Open `index.html` in a web browser to view the project. Thank you for considering my portfolio piece.
