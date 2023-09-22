@@ -44,7 +44,7 @@ body {
 .hidden {
     opacity: 0;
     transform: translateY(30%);
-    transition: all 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
     transition-delay: calc(100ms * var(--order));
 }
 
