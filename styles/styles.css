@@ -32,7 +32,7 @@ body {
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 800;
-    color: rgba(184, 184, 184, 0.8);
+    color: rgba(142, 142, 142, 0.8);
     letter-spacing: 1px;
 }
 
@@ -176,7 +176,7 @@ body {
 
 .banner-homepage {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-    url(../imgs/banner.jpg);
+    url(../imgs/banner.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -185,7 +185,7 @@ body {
 
 .banner-menu {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-    url(../imgs/bgimg1.jpg);
+    url(../imgs/bgimg1.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -193,7 +193,7 @@ body {
 
 .banner-recipes {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-    url(../imgs/bgimg4.jpg);
+    url(../imgs/bgimg4.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -201,7 +201,7 @@ body {
 
 .banner-about {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-    url(../imgs/place.jpg);
+    url(../imgs/place.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -209,7 +209,7 @@ body {
 
 .banner-contact {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-    url(../imgs/bgimg5.jpg);
+    url(../imgs/bgimg5.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -263,7 +263,7 @@ body {
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 600;
-    color: rgb(184, 184, 184);
+    color: rgb(142, 142, 142);
 }
 
 .info-header {
@@ -277,7 +277,7 @@ body {
 
 .reservations-img {
     width: 100%;
-    background: url(../imgs/place.jpg);
+    background: url(../imgs/place.webp);
     background-size: cover;
     background-position: center;
     grid-column: 2 / -1;
@@ -285,7 +285,7 @@ body {
 
 .about-homepage-img {
     width: 100%;
-    background: url(../imgs/menuimg.jpg);
+    background: url(../imgs/menuimg.webp);
     background-size: cover;
     background-position: center;
 }
@@ -293,7 +293,7 @@ body {
 /* SPECIALITIES */
 .specialities {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-    url(../imgs/bgimg2.jpg);
+    url(../imgs/bgimg2.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -383,7 +383,7 @@ body {
 
 .specialities-sep {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-    url(../imgs/bgimg1.jpg);
+    url(../imgs/bgimg1.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -500,7 +500,7 @@ body {
 /* TESTIMONIALS */
 .testimonials {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url(../imgs/bgimg3.jpg);
+    url(../imgs/bgimg3.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -511,13 +511,25 @@ body {
     font-size: 1.5rem;
     line-height: 1.7;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .testimony {
-    position: relative;
-    width: 60%;
+    position: absolute;
+    opacity: 0;
+}
+
+.testimony.active {
+    animation: fade-out 1s forwards;
+}
+
+@keyframes fade-out {
+    to {
+        display: block;
+        opacity: 1;
+    }
 }
 
 .testimony::before {
@@ -538,10 +550,19 @@ body {
     right: 0;
 }
 
+.slider {
+    width: 70%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 /* CONTACT */
 .contact {
     background-color: rgb(246 244 241);
-    height: 80vh;
+    height: 90vh;
     position: relative;
 }
 
@@ -568,7 +589,7 @@ body {
 
 .form-img {
     width: 100%;
-    background: url(../imgs/pasta.jpg);
+    background: url(../imgs/pasta-contact.webp);
     background-size: cover;
     background-position: center;
     flex: 1;
@@ -640,23 +661,24 @@ input, textarea:focus {
 
 .about-img {
     width: 100%;
-    background: url(../imgs/bgimg2.jpg);
+    background: url(../imgs/bgimg2.webp);
     background-size: cover;
 }
 
 .story-img {
     width: 100%;
-    background: url(../imgs/bgimg5.jpg);
+    background: url(../imgs/bgimg5.webp);
     background-size: cover;
 }
 
 .about-sep {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-    url(../imgs/banner.jpg);
+    url(../imgs/banner.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 90vh;
+    text-align: center;
+    height: 45vh;
     display: grid;
     place-content: center;
     color: white;
@@ -762,7 +784,7 @@ iframe {
 footer {
     color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url(../imgs/bgimg3.jpg);
+    url(../imgs/bgimg3.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1097,6 +1119,10 @@ footer p {
 }
 
 /* CONTACT */
+.contact {
+    height: 90vh;
+}
+
 .contact-container {
     width: 100%;
     flex-direction: column;
@@ -1178,7 +1204,7 @@ input {
 
 .info-content {
     padding: 0 1.5rem;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 1rem;
 }
 
@@ -1284,15 +1310,22 @@ input {
     display: none;
 }
 
+.bg-img-3 {
+    bottom: 0;
+    left: 0;
+    transform: translateY(35%);
+    width: 50%;
+}
+
 /* TESTIMONIES */
 .testimonials {
-    height: 70vh;
+    height: 90vh;
     font-size: 1rem;
     padding: 1rem 0;
 }
 
-.testimony {
-    width: 80%;
+.testimonials h2 {
+    font-size: 2.5rem;
 }
 
 /* RECIPES */
@@ -1330,6 +1363,10 @@ input {
 }
 
 /* CONTACT */
+.contact {
+    height: 90vh;
+}
+
 .contact-container {
     width: 100%;
     flex-direction: column;
