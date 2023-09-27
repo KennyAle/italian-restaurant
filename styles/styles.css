@@ -44,7 +44,7 @@ body {
 .hidden {
     opacity: 0;
     transform: translateY(30%);
-    transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     transition-delay: calc(100ms * var(--order));
 }
 
@@ -751,6 +751,11 @@ input, textarea:focus {
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
+}
+
+/* GOOGLE MAP */
+iframe {
+    width: 100%;
 }
 
 /* FOOTER */
